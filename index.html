@@ -3,122 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultra Glass Hyper-Reactive Navbar</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
-
-        body {
-            background: #0a0a0a;
-            color: #fff;
-            overflow-x: hidden;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            background: rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            transition: all 0.3s ease-in-out;
-            z-index: 1000;
-        }
-
-        .navbar.scrolled {
-            background: rgba(0, 0, 0, 0.85);
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .navbar h1 {
-            font-size: 26px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .navbar h1:hover {
-            transform: scale(1.05);
-        }
-
-        .navbar ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-            padding: 0;
-            margin: 0;
-        }
-
-        .navbar li {
-            display: inline-block;
-        }
-
-        .navbar a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: 500;
-            font-size: 18px;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .navbar a::after {
-            content: "";
-            width: 0%;
-            height: 2px;
-            background: #00aaff;
-            position: absolute;
-            left: 50%;
-            bottom: -5px;
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-
-        .navbar a:hover::after {
-            width: 100%;
-        }
-
-        @keyframes floating {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
-            100% { transform: translateY(0px); }
-        }
-
-        .navbar h1 {
-            animation: floating 4s ease-in-out infinite;
-        }
-    </style>
+    <title>Ultra AI Future UI</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar" id="navbar">
-        <h1>ULTRA NAV</h1>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Contact</a></li>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <h1 class="logo">ULTRA AI</h1>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
         </ul>
+        <a href="#" class="btn">Explore</a>
     </nav>
 
-    <script>
-        window.addEventListener("scroll", function() {
-            let navbar = document.getElementById("navbar");
-            if (window.scrollY > 50) {
-                navbar.classList.add("scrolled");
-            } else {
-                navbar.classList.remove("scrolled");
-            }
-        });
-    </script>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <h1 class="glitch-text">THE FUTURE IS NOW</h1>
+        <p>Next-Gen Interactive UI Experience</p>
+        <a href="#features" class="btn">Discover More</a>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section id="features" class="features">
+        <h2>AI-Powered Features</h2>
+        <div class="feature-list">
+            <div class="feature-item">⚡ Glitch-Quantum Text</div>
+            <div class="feature-item">🎨 Dynamic Glass UI</div>
+            <div class="feature-item">🌀 Real-Time Motion Effects</div>
+            <div class="feature-item">💡 AI-Driven Interactions</div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>

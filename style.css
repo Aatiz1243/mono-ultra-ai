@@ -13,80 +13,46 @@ html {
     color: #fff;
 }
 
-/* Navbar - Futuristic Glass Look */
+/* NAVBAR */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
     background: rgba(0, 0, 0, 0.6);
-    
-    /* Blur Effect (Safari fix applied) */
-    -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
-
-    /* Smooth fade on scroll */
+    -webkit-backdrop-filter: blur(15px);
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
 }
 
-/* Navbar Shadow on Scroll */
-.navbar.scrolled {
-    background: rgba(0, 0, 0, 0.85);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Navbar Brand */
 .navbar h1 {
     font-size: 26px;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 2px;
     cursor: pointer;
     transition: transform 0.3s ease;
+    animation: floating 4s ease-in-out infinite;
 }
 
-/* Floating Animation for Modern Feel */
-@keyframes floating {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-3px) scale(1.02); }
-}
-
-.navbar h1 {
-    animation: floating 5s infinite ease-in-out;
-}
-
-.navbar h1:hover {
-    transform: scale(1.05);
-}
-
-/* Navbar Links */
-.navbar ul {
+.nav-links {
     list-style: none;
     display: flex;
     gap: 25px;
-    padding: 0;
-    margin: 0;
 }
 
-.navbar li {
-    display: inline-block;
-}
-
-.navbar a {
+.nav-links a {
     text-decoration: none;
     color: #fff;
     font-weight: 500;
-    font-size: 18px;
     transition: all 0.3s ease;
     position: relative;
 }
 
-/* Underline Hover Effect */
-.navbar a::after {
+.nav-links a::after {
     content: "";
     width: 0%;
     height: 2px;
@@ -98,11 +64,38 @@ html {
     transform: translateX(-50%);
 }
 
-.navbar a:hover::after {
+.nav-links a:hover::after {
     width: 100%;
 }
 
-/* Animated CTA Button */
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #000428, #004e92);
+}
+
+.glitch-text {
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    position: relative;
+    animation: glitch 1s infinite;
+}
+
+/* AI Glitch Effect */
+@keyframes glitch {
+    0% { text-shadow: 5px 5px red, -5px -5px blue; }
+    50% { text-shadow: -5px -5px red, 5px 5px blue; }
+    100% { text-shadow: 5px 5px red, -5px -5px blue; }
+}
+
+/* BUTTON */
 .btn {
     background: linear-gradient(135deg, #00aaff, #0088cc);
     padding: 12px 24px;
@@ -112,13 +105,34 @@ html {
     text-decoration: none;
     color: white;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
 }
 
-/* Button Hover Effect */
 .btn:hover {
     background: linear-gradient(135deg, #0088cc, #00aaff);
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(0, 170, 255, 0.6);
+}
+
+/* FEATURES SECTION */
+.features {
+    padding: 50px;
+    text-align: center;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    padding: 15px 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: scale(1.1);
 }
