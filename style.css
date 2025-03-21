@@ -19,13 +19,14 @@ html {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.8);
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
+    border-bottom: 2px solid #00aaff;
     transition: background 0.3s ease-in-out;
 }
 
@@ -35,7 +36,6 @@ html {
     text-transform: uppercase;
     cursor: pointer;
     transition: transform 0.3s ease;
-    animation: floating 4s ease-in-out infinite;
 }
 
 .nav-links {
@@ -79,27 +79,21 @@ html {
     background: linear-gradient(135deg, #000428, #004e92);
 }
 
+/* Updated Title Without Glitch */
 .glitch-text {
     font-size: 48px;
     font-weight: bold;
     text-transform: uppercase;
     color: #fff;
     position: relative;
-    animation: glitch 1s infinite;
-}
-
-/* AI Glitch Effect */
-@keyframes glitch {
-    0% { text-shadow: 5px 5px red, -5px -5px blue; }
-    50% { text-shadow: -5px -5px red, 5px 5px blue; }
-    100% { text-shadow: 5px 5px red, -5px -5px blue; }
+    text-shadow: 0px 0px 15px rgba(0, 170, 255, 0.8);
 }
 
 /* BUTTON */
 .btn {
     background: linear-gradient(135deg, #00aaff, #0088cc);
     padding: 12px 24px;
-    border-radius: 50px;
+    border: 2px solid #0088cc;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
@@ -129,7 +123,7 @@ html {
 .feature-item {
     padding: 15px 30px;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
+    border: 2px solid #00aaff;
     transition: transform 0.3s ease;
 }
 
