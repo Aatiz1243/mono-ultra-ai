@@ -20,8 +20,8 @@ html {
     align-items: center;
     padding: 20px 40px;
     background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
     position: fixed;
     width: 100%;
     top: 0;

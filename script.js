@@ -2,7 +2,7 @@
 window.addEventListener("scroll", () => {
     let navbar = document.querySelector(".navbar");
     let scrollPos = window.scrollY;
-    
+
     if (scrollPos > 50) {
         navbar.style.background = "rgba(0, 0, 0, 0.85)";
         navbar.style.boxShadow = "0px 4px 15px rgba(0, 0, 0, 0.3)";
