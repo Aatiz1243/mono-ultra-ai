@@ -1,56 +1,125 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background: #121212;
-    color: #fff;
+/* Global Reset */
+* {
     margin: 0;
     padding: 0;
-    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
+/* Smooth Scroll & Dark Background */
+html {
+    scroll-behavior: smooth;
+    background: #0a0a0a;
+    color: #fff;
+}
+
+/* Navbar - Futuristic Glass Look */
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 15px 30px;
-    background: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.6);
     
-    /* Safari Fix */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    /* Blur Effect */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    /* Smooth fade on scroll */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+/* Navbar Shadow on Scroll */
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.85);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Navbar Brand */
 .navbar h1 {
-    font-size: 24px;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
+.navbar h1:hover {
+    transform: scale(1.05);
+}
+
+/* Navbar Links */
 .navbar ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
     padding: 0;
     margin: 0;
+}
+
+.navbar li {
+    display: inline-block;
 }
 
 .navbar a {
     text-decoration: none;
     color: #fff;
-    transition: color 0.3s ease;
+    font-weight: 500;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
-.navbar a:hover {
-    color: #00aaff;
-}
-
-/* Button Styling */
-.btn {
+/* Underline Hover Effect */
+.navbar a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
     background: #00aaff;
-    padding: 10px 20px;
-    border-radius: 8px;
-    color: white;
-    text-decoration: none;
-    transition: background 0.3s ease, transform 0.2s ease;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
 
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* Animated CTA Button */
+.btn {
+    background: linear-gradient(135deg, #00aaff, #0088cc);
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Button Hover Effect */
 .btn:hover {
-    background: #0088cc;
+    background: linear-gradient(135deg, #0088cc, #00aaff);
     transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.6);
+}
+
+/* Floating Animation for Modern Feel */
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+}
+
+.navbar h1 {
+    animation: floating 4s ease-in-out infinite;
 }
