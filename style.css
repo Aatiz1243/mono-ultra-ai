@@ -12,7 +12,10 @@ body {
     justify-content: space-between;
     padding: 15px 30px;
     background: rgba(0, 0, 0, 0.8);
+    
+    /* Safari Fix */
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .navbar h1 {
@@ -23,6 +26,8 @@ body {
     list-style: none;
     display: flex;
     gap: 20px;
+    padding: 0;
+    margin: 0;
 }
 
 .navbar a {
@@ -35,15 +40,17 @@ body {
     color: #00aaff;
 }
 
+/* Button Styling */
 .btn {
     background: #00aaff;
     padding: 10px 20px;
     border-radius: 8px;
     color: white;
     text-decoration: none;
-    transition: 0.3s;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .btn:hover {
     background: #0088cc;
+    transform: scale(1.05);
 }
