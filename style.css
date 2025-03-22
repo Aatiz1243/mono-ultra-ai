@@ -1,132 +1,121 @@
-/* Global Reset */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Smooth Scroll & Dark Background */
-html {
-    scroll-behavior: smooth;
-    background: #0a0a0a;
-    color: #fff;
-}
-
-/* NAVBAR */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background: rgba(0, 0, 0, 0.8);
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    border-bottom: 2px solid #00aaff;
-    transition: background 0.3s ease-in-out;
-}
-
-.navbar h1 {
-    font-size: 26px;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.nav-links a::after {
-    content: "";
-    width: 0%;
-    height: 2px;
-    background: #00aaff;
-    position: absolute;
-    left: 50%;
-    bottom: -5px;
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-
-.nav-links a:hover::after {
-    width: 100%;
+body {
+    background: black;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
 }
 
 /* HERO SECTION */
-.hero {
+#hero {
+    position: relative;
     height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(135deg, #000428, #004e92);
 }
 
-/* Updated Title Without Glitch */
-.glitch-text {
-    font-size: 48px;
-    font-weight: bold;
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
     text-transform: uppercase;
-    color: #fff;
-    position: relative;
-    text-shadow: 0px 0px 15px rgba(0, 170, 255, 0.8);
+    margin-top: 20px;
+    animation: glitch 1.5s infinite;
 }
 
-/* BUTTON */
+.hero-content p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* Glitch Animation */
+@keyframes glitch {
+    0% { text-shadow: 4px 4px red; }
+    25% { text-shadow: -4px -4px cyan; }
+    50% { text-shadow: 4px -4px yellow; }
+    75% { text-shadow: -4px 4px magenta; }
+    100% { text-shadow: 4px 4px red; }
+}
+
+/* BUTTONS */
 .btn {
-    background: linear-gradient(135deg, #00aaff, #0088cc);
+    display: inline-block;
     padding: 12px 24px;
-    border: 2px solid #0088cc;
-    font-weight: bold;
-    text-transform: uppercase;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 8px;
     text-decoration: none;
     color: white;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
 .btn:hover {
-    background: linear-gradient(135deg, #0088cc, #00aaff);
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(0, 170, 255, 0.6);
+    background: white;
+    color: black;
 }
 
-/* FEATURES SECTION */
+/* ABOUT SECTION */
+#about {
+    padding: 50px 20px;
+}
+
+#about h2 {
+    font-size: 2rem;
+}
+
 .features {
-    padding: 50px;
-    text-align: center;
-}
-
-.feature-list {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-.feature-item {
-    padding: 15px 30px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid #00aaff;
-    transition: transform 0.3s ease;
+.feature {
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 8px;
+    transition: 0.3s;
 }
 
-.feature-item:hover {
-    transform: scale(1.1);
+.feature:hover {
+    background: white;
+    color: black;
 }
+
+/* CAPABILITIES */
+#capabilities {
+    padding: 50px 20px;
+}
+
+.capability {
+    margin: 20px 0;
+}
+
+/* CTA */
+#cta {
+    padding: 50px 20px;
+    background: linear-gradient(to right, #000000, #1a1a1a);
+}
+
