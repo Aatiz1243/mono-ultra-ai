@@ -8,39 +8,38 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-
     <!-- 🔄 Loading Screen -->
     <div id="loading-screen">
-        <div class="loading-icon"></div>
+        <div class="loading-spinner"></div>
     </div>
 
-    <!-- 🏠 Hero Section -->
-    <section id="hero">
-        <video autoplay muted loop id="background-video">
-            <source src="assets/videos/background.mp4" type="video/mp4">
-        </video>
-        <div class="hero-content">
-            <img src="assets/images/logo.png" id="logo" alt="Ultra AI Logo">
-            <a href="#content" id="scroll-down">▼</a>
-        </div>
-    </section>
+    <!-- 🔷 Hero Section -->
+    <header id="hero">
+        <img src="assets/images/logo.png" id="logo" alt="MONO Ultra AI Logo">
+        <div id="down-arrow" onclick="startExperience()">▼</div>
+    </header>
 
-    <!-- 📌 Navigation Bar -->
+    <!-- 🔷 Navigation Bar -->
     <nav id="navbar">
-        <img src="assets/images/logo.png" class="nav-logo">
-        <ul class="nav-links">
+        <img src="assets/images/logo.png" class="nav-logo" alt="Navigation Logo">
+        <ul>
+            <li><a href="components/home.html">Home</a></li>
             <li><a href="components/about.html">About</a></li>
-            <li><a href="components/features.html">Features</a></li>
             <li><a href="components/contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- 📖 Content Sections -->
-    <div id="content">
-        <section id="about"></section>
-        <section id="features"></section>
-        <section id="contact"></section>
-    </div>
+    <!-- 🔷 AI Chat Section -->
+    <section id="ai-chat">
+        <video autoplay muted loop id="background-video">
+            <source src="assets/videos/background.mp4" type="video/mp4">
+        </video>
+        <button id="chat-btn">Start AI Chat</button>
+    </section>
 
+    <!-- 🔷 Main Content (Dynamic Sections Load Here) -->
+    <main id="content">
+        <script>loadPage('components/home.html');</script>
+    </main>
 </body>
 </html>
