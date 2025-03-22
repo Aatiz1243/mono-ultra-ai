@@ -9,53 +9,38 @@
 </head>
 <body>
 
-    <!-- HERO SECTION -->
+    <!-- 🔄 Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-icon"></div>
+    </div>
+
+    <!-- 🏠 Hero Section -->
     <section id="hero">
-        <video autoplay muted loop id="bg-video">
+        <video autoplay muted loop id="background-video">
             <source src="assets/videos/background.mp4" type="video/mp4">
         </video>
         <div class="hero-content">
-            <img src="assets/images/logo.png" alt="MONO Ultra AI Logo">
-            <h1 class="glitch-text">THE FUTURE IS NOW</h1>
-            <p>Revolutionizing AI and Interactive Intelligence.</p>
-            <a href="#about" class="btn">Explore AI</a>
+            <img src="assets/images/logo.png" id="logo" alt="Ultra AI Logo">
+            <a href="#content" id="scroll-down">▼</a>
         </div>
     </section>
 
-    <!-- ABOUT MONO ULTRA AI -->
-    <section id="about">
-        <h2>What is MONO Ultra AI?</h2>
-        <p>MONO Ultra AI is an advanced ecosystem that combines deep learning, automation, and real-time adaptive intelligence.</p>
-        <div class="features">
-            <div class="feature">🔹 Real-time decision-making</div>
-            <div class="feature">🔹 Self-learning neural AI</div>
-            <div class="feature">🔹 Hyper-responsive automation</div>
-            <div class="feature">🔹 Smart environment integration</div>
-        </div>
-    </section>
+    <!-- 📌 Navigation Bar -->
+    <nav id="navbar">
+        <img src="assets/images/logo.png" class="nav-logo">
+        <ul class="nav-links">
+            <li><a href="components/about.html">About</a></li>
+            <li><a href="components/features.html">Features</a></li>
+            <li><a href="components/contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-    <!-- AI CAPABILITIES -->
-    <section id="capabilities">
-        <h2>AI-Powered Core Capabilities</h2>
-        <div class="capability">
-            <h3>⚡ Hyper-Fast AI Processing</h3>
-            <p>Ultra-low latency AI that adapts and learns in real-time.</p>
-        </div>
-        <div class="capability">
-            <h3>🎨 Interactive AI UI</h3>
-            <p>Dynamic UI that evolves based on user interactions.</p>
-        </div>
-        <div class="capability">
-            <h3>🧠 Deep Learning & Neural Networks</h3>
-            <p>AI that continuously improves itself for optimized performance.</p>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section id="cta">
-        <h2>Experience MONO Ultra AI</h2>
-        <a href="#" class="btn">Try Now</a>
-    </section>
+    <!-- 📖 Content Sections -->
+    <div id="content">
+        <section id="about"></section>
+        <section id="features"></section>
+        <section id="contact"></section>
+    </div>
 
 </body>
 </html>
